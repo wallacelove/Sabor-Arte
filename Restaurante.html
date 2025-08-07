@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restaurante.css">
+    <title>Sabor & Arte</title>
+</head>
+
+<body>
+<h1 class="title">Sabor & Arte</h1>
+
+<p class="descricao">Sabor & Arte é mais do que um restaurante, é uma experiência gastronômica que une criatividade e paladar.
+    
+    Cada prato é preparado como uma verdadeira obra de arte, combinando ingredientes selecionados,  temperos marcantes e apresentação impecável. Um espaço onde o amor pela boa comida encontra a inspiração da culinária contemporânea.</p>
+
+<h2 class="Cardapio">Cardápio</h2>
+<div class="container-menu"> 
+    <div class="menu">
+        <button onclick="mostrarSecao(event, 'entradas')" class="active">Entradas</button>
+        <button onclick="mostrarSecao(event, 'principais')">Pratos Principais</button>
+        <button onclick="mostrarSecao(event, 'bebidas')">Bebidas</button>
+    </div>
+</div>
+
+
+
+<!-- Seção ENTRADAS -->
+ <div class="container secao" id="principais">
+    <h3>Pratos Principais</h3>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img/File Mignon.png" alt="Filé Mignon ao molho de vinho" width="200" height="150">
+            <div class="info">
+                <h4>Filé Mignon ao Molho de Vinho</h4>
+                <p class="preco">R$ 45,00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/salmão.png" alt="Salmão Grelhado com Legumes" width="200" height="150">
+            <div class="info">
+                <h4>Salmão Grelhado com Legumes</h4>
+                <p class="preco">R$ 50,00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/Bife-a-Parmegiana.pbg.jpg" alt="Bife-a-Parmegiana" width="200" height="150">
+            <div class="info">
+                <h4>Bife-a-Parmegiana</h4>
+                <p class="preco">R$ ,00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Seção PRINCIPAIS -->
+<div class="container secao" id="entradas">
+    <h3>Entradas</h3>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img/Bruschetta.png" alt="Bruschetta" width="200" height="150">
+            <div class="info">
+                <h4>Bruschetta de Tomate e Manjericão</h4>
+                <p class="preco">R$ 15,00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/salada-caesar.png" alt="salada-caesar" width="200" height="150">
+            <div class="info">
+                <h4>salada-caesar</h4>
+                <p class="preco">R$ 20,00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/croque-carne.png" alt="croque-carne" width="200" height="150">
+            <div class="info">
+                <h4>Bife-a-Parmegiana</h4>
+                <p class="preco">R$ 12,00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Seção BEBIDAS -->
+<div class="container secao" id="bebidas">
+    <h3>Bebidas</h3>
+    <div class="cards-container">
+        <div class="card">
+            <img src="img/Suco de Laranja.png" alt="Suco natural de laranja" width="200" height="150">
+            <div class="info">
+                <h4>Suco Natural de Laranja</h4>
+                <p class="preco">R$ 8,00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/Refrigerante.png" alt="Refrigerante" width="200" height="150">
+            <div class="info">
+                <h4>Refrigerante</h4>
+                <p class="preco">R$ 6,00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/água,png.jpg" alt="Água mineral" width="200" height="150">
+            <div class="info">
+                <h4>Água Mineral</h4>
+                <p class="preco">R$ 4,00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarSecao(event, id) {
+        const secoes = document.querySelectorAll('.secao');
+        secoes.forEach(secao => secao.classList.remove('active'));
+
+        document.getElementById(id).classList.add('active');
+
+        const botoes = document.querySelectorAll('.menu button');
+        botoes.forEach(botao => botao.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+</script>
+
+<footer><p>© 2023 Sabor & Arte. Todos os direitos reservados.</p></footer>
+</body>
+</html>
